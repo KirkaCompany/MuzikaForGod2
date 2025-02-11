@@ -35,7 +35,7 @@ else:
 logging.basicConfig(level=logging.INFO)
 
     # Токен бота Telegram
-TOKEN = "7801480937:AAGYlIyrIITlg00Be2DrIUabUJ_gl11DVNI"
+API_TOKEN = "7801480937:AAGYlIyrIITlg00Be2DrIUabUJ_gl11DVNI"
 PROXY = 'http://222.252.194.204:8080'
 
     # Данные для подключения к Spotify API
@@ -109,6 +109,7 @@ async def download_and_send_music(message: types.Message, query: str):
             'quiet': True,
             'outtmpl': 'downloads/%(title)s.%(ext)s',
             'force-ipv4': True,
+            'proxy': 'http://222.252.194.204:8080',
             'cookiefile': './cookies.txt',
             'nocheckcertificate': True,  # ✅ Отключаем проверку SSL-сертификата
         }
