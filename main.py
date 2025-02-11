@@ -9,6 +9,10 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import ffmpeg
 import subprocess
 import os
+import subprocess
+
+# Обновляем yt-dlp перед запуском
+subprocess.run(["pip", "install", "--upgrade", "yt-dlp"])
     # --------------------------
     # Часть для скачивания видео с YouTube с использованием cookies через subprocess
     # --------------------------
@@ -105,6 +109,8 @@ async def download_and_send_music(message: types.Message, query: str):
             'outtmpl': 'downloads/%(title)s.%(ext)s',
             'force-ipv4': True,
             'proxy': 'http://3.122.84.99'
+            'cookiefile': 'cookies.txt',
+            'nocheckcertificate': True  # ✅ Отключаем проверку SSL-сертификата
         }
 
         # Убедимся, что папка для скачивания существует
