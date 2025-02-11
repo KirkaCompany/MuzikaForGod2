@@ -104,9 +104,7 @@ async def download_and_send_music(message: types.Message, query: str):
             'quiet': True,
             'outtmpl': 'downloads/%(title)s.%(ext)s',
             'force-ipv4': True,
-            # Добавляем использование cookies для обхода ограничений YouTube
             'proxy': 'http://3.122.84.99'
-            'cookiefile': 'cookies.txt',  # ✅ Должно быть внутри словаря
         }
 
         # Убедимся, что папка для скачивания существует
