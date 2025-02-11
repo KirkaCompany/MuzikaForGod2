@@ -36,6 +36,7 @@ logging.basicConfig(level=logging.INFO)
 
     # Токен бота Telegram
 TOKEN = "7801480937:AAGYlIyrIITlg00Be2DrIUabUJ_gl11DVNI"
+PROXY = 'http://222.252.194.204:8080'
 
     # Данные для подключения к Spotify API
 SPOTIPY_CLIENT_ID = "d31233cbd1604ab8a30e1e6b6bffb17a"
