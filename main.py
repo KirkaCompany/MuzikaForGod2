@@ -44,8 +44,8 @@ SPOTIPY_CLIENT_SECRET = "2547ed9b43584e658220f9561640d7fe"
 SPOTIPY_REDIRECT_URI = "https://replit.com/@hhhhshsbb/MuzikaForGodbot"
 
     # Инициализация бота и диспетчера
-bot = Bot(token=TOKEN)
-dp = Dispatcher()
+bot = Bot(token=API_TOKEN, proxy=PROXY)
+dp = Dispatcher(bot)
 
     # Инициализация Spotify API
 client_credentials_manager = SpotifyClientCredentials(
