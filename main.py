@@ -108,8 +108,7 @@ async def download_and_send_music(message: types.Message, query: str):
             'quiet': True,
             'outtmpl': 'downloads/%(title)s.%(ext)s',
             'force-ipv4': True,
-            'proxy': 'http://3.122.84.99'
-            'cookiefile: cookies.txt',
+            'proxy': 'http://3.122.84.99:8080'
             'nocheckcertificate': True  # ✅ Отключаем проверку SSL-сертификата
         }
 
