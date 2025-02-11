@@ -17,7 +17,7 @@ subprocess.run(["pip", "install", "--upgrade", "yt-dlp"])
     # Часть для скачивания видео с YouTube с использованием cookies через subprocess
     # --------------------------
 video_url = "https://www.youtube.com/watch?v=AykAUJYvW_c"
-cookies_file = "cookies.txt"  # Убедитесь, что файл cookies.txt загружен в окружение Render или находится в проекте
+cookies_file = "./cookies.txt"  # Убедитесь, что файл cookies.txt загружен в окружение Render или находится в проекте
 
 command = ["yt-dlp", "--cookies", cookies_file, video_url]
 
