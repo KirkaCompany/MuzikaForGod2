@@ -35,8 +35,7 @@ else:
 logging.basicConfig(level=logging.INFO)
 
     # Токен бота Telegram
-API_TOKEN = "7801480937:AAGYlIyrIITlg00Be2DrIUabUJ_gl11DVNI"
-PROXY = 'http://222.252.194.204:8080'
+TOKEN = "7801480937:AAGYlIyrIITlg00Be2DrIUabUJ_gl11DVNI"
 
     # Данные для подключения к Spotify API
 SPOTIPY_CLIENT_ID = "d31233cbd1604ab8a30e1e6b6bffb17a"
@@ -44,8 +43,8 @@ SPOTIPY_CLIENT_SECRET = "2547ed9b43584e658220f9561640d7fe"
 SPOTIPY_REDIRECT_URI = "https://replit.com/@hhhhshsbb/MuzikaForGodbot"
 
     # Инициализация бота и диспетчера
-bot = Bot(token=API_TOKEN, proxy=PROXY)
-dp = Dispatcher(bot)
+bot = Bot(token=TOKEN)
+dp = Dispatcher()
 
     # Инициализация Spotify API
 client_credentials_manager = SpotifyClientCredentials(
@@ -109,7 +108,6 @@ async def download_and_send_music(message: types.Message, query: str):
             'quiet': True,
             'outtmpl': 'downloads/%(title)s.%(ext)s',
             'force-ipv4': True,
-            'proxy': 'http://222.252.194.204:8080',
             'cookiefile': './cookies.txt',
             'nocheckcertificate': True,  # ✅ Отключаем проверку SSL-сертификата
         }
